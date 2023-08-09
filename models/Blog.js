@@ -19,12 +19,18 @@ Blog.init(
   },
   posted_by: {
    type: DataTypes.STRING,
+   post_on: DataTypes.DATEONLY,
    references: {
     model: "user",
-    key: "user_name"
+    key: "username"
    },
-   post_on: DataTypes.DATEONLY
   },
+  comments: {
+  references: {
+   model: "comment",
+   key: "id"
+   }
+  }
  },
  {
   sequelize,

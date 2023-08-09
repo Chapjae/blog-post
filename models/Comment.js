@@ -27,7 +27,7 @@ Comment.init(
    allowNull: false,
    references: {
     model: 'user',
-    key: "id"
+    key: "username"
    }
   }
  },
@@ -38,3 +38,5 @@ Comment.init(
   modelName: "comment"
  }
 )
+
+module.exports = Comment
