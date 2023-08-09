@@ -16,7 +16,15 @@ Blog.init(
   },
   content: {
    type: DataTypes.STRING
-  }
+  },
+  posted_by: {
+   type: DataTypes.STRING,
+   references: {
+    model: "user",
+    key: "user_name"
+   },
+   post_on: DataTypes.DATEONLY
+  },
  },
  {
   sequelize,
